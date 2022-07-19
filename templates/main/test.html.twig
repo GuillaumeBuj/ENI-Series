@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>testou</h1>
+    <div>
+
+        <div>{{ "now"|date('Y') }}</div>
+
+        {# crée une variable #}
+        {% set name="Guillaume"%}
+        <h2>{{ name|upper }}</h2>
+
+        {% set colors=["orange","turquoise","brown","blue"] %}
+        <div>Nombre de couleurs: {{ colors|length }}</div>
+        <div>{{ colors|join( ' / ') }}</div>
+        {% for color in colors %}
+            <div>{{ loop.index }}</div>
+            <div style="background-color:{{ color }}">{{ color }}</div>
+        {% endfor %}
+
+        {# un objet #}
+        {% set book={
+            title: 'Axis: Bold as Love',
+            year: 1967,
+            author:"Hendrix"}
+        %}
+        <h3>{{ book.author }}</h3>
+        <div>
+            {% for key, val in book %}
+                <div>{{ key }}: {{ val }}</div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block title %}{{ parent() }} | Home{% endblock %}
