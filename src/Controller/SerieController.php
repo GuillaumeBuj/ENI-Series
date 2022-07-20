@@ -33,6 +33,8 @@ class SerieController extends AbstractController
      */
     public function create(): Response
     {
+        //dump("yo");
+        //dd("yep");
         return $this->render('serie/create.html.twig', [
 
         ]);
