@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-todo aff titre | {{ parent() }}
+    {{ serie.name}} | {{ parent() }}
 {% endblock %}
 
 {% block body %}
-    <h2>todo titre</h2>
-
-    {# todo infos serie #}
+    <h2>{{ serie.name }}</h2>
+    <div>{{ serie.overview}}</div>
+    <div>{{ serie.vote}}</div>
 {% endblock %}
 
