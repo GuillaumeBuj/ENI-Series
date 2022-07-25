@@ -2,7 +2,7 @@ body {
     background: linear-gradient(#000000, #132135);
     background-attachment: fixed;
     color: #EEE;
-    font-family: 'Medium 500', sans-serif;
+    font-family: 'Crimson Text', serif;
 }
 
 .container {
@@ -48,26 +48,26 @@ nav li {
     margin-right: 1rem;
 }
 
-.series-list{
+.series-list {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill,minmax(140px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
 }
 
-label{
+label {
     display: block;
 }
 
 input,
 textarea,
-select{
+select {
     margin-bottom: 1rem;
     box-sizing: border-box;
     width: 150px;
-    max-width: 150px;
+    max-width: 50%;
 }
 
-.flash{
+.flash {
     padding: 20px;
     font-weight: bold;
     font-size: 1.4rem;
@@ -75,6 +75,20 @@ select{
     border-radius: 5px;
 }
 
-.flash-success{
-   background-color: darkgreen;
+.flash-success {background-color: darkgreen}
+
+.serie-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.serie-details-infos > div {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+    .serie-details {
+        grid-template-columns: 300px 1fr;
+    }
 }

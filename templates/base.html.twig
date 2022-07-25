@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}Séries!{% endblock %}</title>
+    <title>{% block title %}Series!{% endblock %}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <link rel="icon" href="{{ asset('../img/icon.png') }}">
+    <link rel="icon" href="{{ asset('img/icon.png') }}">
+
+    {% block extrastyles %}{% endblock %}
+
 </head>
 <body>
     <div class="container">
         <header>
-            <h1><a href="{{ path('main_home') }}"><img src="{{ asset('../img/logo.svg') }}" alt="Séries!"></a></h1>
+            <h1><a href="{{ path('main_home') }}"><img src="{{ asset('img/logo.svg') }}" alt="Series!"></a></h1>
             {% include 'inc/nav.html.twig' %}
         </header>
 
@@ -35,7 +38,7 @@
         </main>
         <footer>
             {% include 'inc/nav.html.twig' %}
-            <div>&copy; {{ "now"|date("Y") }} Séries!</div>
+            <div>&copy; {{ "now"|date("Y") }} Series!</div>
         </footer>
     </div>
 </body>

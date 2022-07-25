@@ -1,4 +1,6 @@
 /.idea/
+/public/img/backdrops
+/public/img/posters
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
